@@ -13,18 +13,27 @@ var shape= true; // let true be circle, false is square
 //this draws the circle with an outline of black and a fill color of cyan
 var circle= function(x,y){
   ctx.strokeStyle="black";
-  ctx.fillStyle="cyan";
+  ctx.fillStyle="black";
+  ctx.lineTo(x,y);
+  ctx.stroke();
   ctx.beginPath();
   ctx.arc(x-10,y-10,25,0,2*Math.PI);//subtracting to center the mouse click
+  ctx.moveTo(x,y);
+  ctx.lineTo(x,y);
   ctx.stroke();
   ctx.fill();
 }
 
 //draws the square with an ourline of red and a fill color of purple
 var square=function(x,y){
-  ctx.strokeStyle="red";
-  ctx.fillStyle="purple";
+  ctx.strokeStyle="black";
+  ctx.fillStyle="black";
+  ctx.lineTo(x,y);
+  ctx.stroke();
+  ctx.beginPath();
   ctx.fillRect(x-12,y-12,25,25);//subtracting to center the mouse click
+  ctx.moveTo(x,y);
+  ctx.lineTo(x,y);
 }
 //if the toggle button is clicked this negates the shape.
 var changeShape=function(){
