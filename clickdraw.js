@@ -15,7 +15,7 @@ var circle= function(x,y){
   ctx.strokeStyle="black";
   ctx.fillStyle="cyan";
   ctx.beginPath();
-  ctx.arc(x-10,y-10,10,0,2*Math.PI);//subtracting to center the mouse click
+  ctx.arc(x-10,y-10,25,0,2*Math.PI);//subtracting to center the mouse click
   ctx.stroke();
   ctx.fill();
 }
@@ -24,25 +24,20 @@ var circle= function(x,y){
 var square=function(x,y){
   ctx.strokeStyle="red";
   ctx.fillStyle="purple";
-  ctx.fillRect(x-15,y-15,15,15);//subtracting to center the mouse click
+  ctx.fillRect(x-12,y-12,25,25);//subtracting to center the mouse click
 }
 //if the toggle button is clicked this negates the shape.
 var changeShape=function(){
-  if(shape){
-    shape=false;
-  }
-  else{
-    shape=true;
-  }
+  shape=!shape;
 }
 // drawShape is called at mouse click and calls the circle and square functions
 var drawShape=function(e){
   ctx.fillStyle="cyan";
   if(shape){
-    circle(e.x,e.y);//at the mouse location
+    circle(e.offsetX,e.offsetY);//at the mouse location
   }
   else{
-    square(e.x,e.y);
+    square(e.offsetX,e.offsetY);
   }
 }
 //when clear is clicked it clears the canvas, all coordinates.
