@@ -1,3 +1,7 @@
+//Bayan Berri-- B^2
+//SoftDev2 pd7
+//K00--See a Red Door...
+//2018-02-05
 
 var c=document.getElementById("slate"); //gets the canvas tag 
 var ctx=c.getContext("2d");//obj info
