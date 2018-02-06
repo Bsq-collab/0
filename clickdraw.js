@@ -13,7 +13,7 @@ var shape= true; // let true be circle, false is square
 //this draws the circle with an outline of black and a fill color of cyan
 var circle= function(x,y){
   ctx.strokeStyle="black";
-  ctx.fillStyle="black";
+  ctx.fillStyle="cyan";
   ctx.lineTo(x,y);
   ctx.stroke();
   ctx.beginPath();
@@ -27,7 +27,7 @@ var circle= function(x,y){
 //draws the square with an ourline of red and a fill color of purple
 var square=function(x,y){
   ctx.strokeStyle="black";
-  ctx.fillStyle="black";
+  ctx.fillStyle="yellow";
   ctx.lineTo(x,y);
   ctx.stroke();
   ctx.beginPath();
